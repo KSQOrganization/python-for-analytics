@@ -1,0 +1,22 @@
+# Data Catalog for Online Retail Analytics
+# Documentation: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
+
+# Raw transaction data (example - adjust based on your data source)
+raw_transactions:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/online_retail.csv
+
+# Cleaned transaction data
+cleaned_transactions:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/cleaned_transactions.parquet
+
+# Transaction data with derived features
+transactions_with_features:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/transactions_with_features.parquet
+
+# Customer-level aggregated metrics
+customer_metrics:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/customer_metrics.parquet
