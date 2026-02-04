@@ -10,7 +10,7 @@ from kedro.pipeline import Pipeline, node
 from .nodes import add_derived_features, aggregate_customer_metrics, clean_transactions
 
 
-def create_pipeline(**kwargs) -> Pipeline:
+def create_pipeline(**kwargs) -> Pipeline:  # pylint: disable=unused-argument
     """Create the data processing pipeline."""
     return Pipeline(
         [

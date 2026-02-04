@@ -1,7 +1,5 @@
 """Unit test example for online-retail-analytics."""
 
-import pytest
-
 
 def test_sample_data_structure(sample_data):
     """Test that sample data has the expected structure."""
